@@ -1,0 +1,38 @@
+#drop_zone {
+  position: relative !important;
+  border: 1px solid white !important;
+}
+
+.copy-btn {
+  position: absolute;
+  bottom: -0.7rem;
+  right: 5rem;
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  vertical-align: middle;
+  z-index: 1;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+  color: #fff;
+  background-color: #002b36;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border: 1px solid white;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.copy-btn:hover {
+  background-color: #2bbbad;
+}
+
+.copy-btn:active {
+  background-color: #1d7d74;
+}
