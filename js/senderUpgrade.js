@@ -86,7 +86,7 @@ class Spro {
 
   bincheker() {
     this.binchekerBtn.onclick = () => {
-      const propmt = prompt("Введите бин или номер карты");
+      const propmt = prompt("Введіть номер чи БІН картки");
 
       const api = "https://p2p.monobank.com.ua/bin/";
       const bin = propmt.replace(/\D+/g, "");
@@ -110,10 +110,10 @@ class Spro {
                 "Система: " +
                 result[0].product.system +
                 "<br>" +
-                "Название: " +
+                "Назва: " +
                 result[0].product.name +
                 "<br>" +
-                "Код страны: " +
+                "Код країни: " +
                 result[0].country +
                 "<br>" +
                 "МФО: " +
@@ -122,13 +122,13 @@ class Spro {
             },
             error => {
               output.innerText +=
-                "Что то пошло не так либо введено некорректное значение";
+                "Щось пішло не так або введено некоректне значення";
 
                 console.log(error)
             }
           );
       } else {
-        alert("Нужно ввести 6 цифр (БИН) либо полный номер 16 цифр");
+        alert("Потрібно ввести 6 цифр (БІН) або повний номер 16 цифр");
       }
     };
   }
@@ -142,7 +142,7 @@ class Spro {
 
     this.bindKeyCloseBtn.onclick = () => {
       let char = prompt(
-        "Нажми клавишу которую нужно забиндить для закрытия диалогов и нажми ок. Ты можешь ввести сюда большой текст, но работать будет по первой клавише. Чуствителен к языку"
+        "Натисни клавішу, яку потрібно забіндити для закриття діалогів, і натисни ок. Ти можеш ввести сюди великий текст, але працювати буде за першою клавішею. Чутливий до мови"
       );
 
       window.addEventListener("keydown", e => {
@@ -285,6 +285,6 @@ class Spro {
   }
 }
 
-if (window.location.href.includes("https://chat-sender2c.ftband.net") || window.location.href.includes("https://chat-sender2c.ftband.net")) {
+if (window.location.href.includes("https://chat.sender.ftband.net/") || window.location.href.includes("https://chat.sender.ftband.net/")) {
   const spro = new Spro(".sf_container", ".sf_chat_sendbar_oper_support");
 }
