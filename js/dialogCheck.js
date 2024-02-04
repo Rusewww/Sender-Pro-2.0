@@ -15,7 +15,7 @@ setInterval(() => {
     }
   }
 
-  if (window.location.href.includes("https://chat.sender.ftband.net/") || window.location.href.includes("https://chat.sender.ftband.net/")) {
+  if (window.location.href.includes("https://chat.sender.ftband.net") || window.location.href.includes("https://chat.sender.ftband.net")) {
     const dialogsNote = new DialogsNote(".sf_sidebar_company_chat");
   }
 }, 1000);

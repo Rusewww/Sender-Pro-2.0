@@ -11,8 +11,8 @@
   "content_scripts": [
     {
       "matches": [
-	    "*://chat.sender2c.ftband.net/*",
-        "*://chat-sender2c.ftband.net/*",
+	    "*://chat.sender.ftband.net/*",
+        "*://chat.sender.ftband.net/*",
         "*://haste.ftband.net/img/*"
       ],
       "js": ["./js/senderUpgrade.js", "./js/dialogCheck.js", "./js/haste.js"],
