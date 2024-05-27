@@ -44,23 +44,38 @@ class HasteUpd {
 }
 
 if (window.location.href.includes("https://haste.ftband.net/img")) {
-  const haste = new HasteUpd("#drop_zone", "body");
+  new HasteUpd("#drop_zone", "body");
 }
 
 const request = (base64) => {
   const xhttp = new XMLHttpRequest();
 
-  xhttp.onreadystatechange = function () {
+  xhttp.onreadystatechange = () => {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var doc_id = JSON.parse(xhttp.responseText).key;
       var doc_url = [window.location.href, "?i=", doc_id].join("");
       textarea = [
-        '<div class="textarea"><dt><text>Your Link</text></dt><dt><input readonly="" onfocus="this.select()" value="',
-        doc_url,
-        '" type="text"></dt></div>',
+        `<div class="textarea"><dt><text>Your Link:</text></dt><dt><img src="data:image/png;base64, ${base64}"><input readonly="" onfocus="this.select()" value=${doc_url} type="text"></dt></div>`,
       ].join("");
 
       document.querySelector("#custom-list").innerHTML += [textarea].join("");
+
+      const texts = document.querySelectorAll("#custom-list  div text");
+
+      const imgs = document.querySelectorAll("img");
+
+      if (texts) {
+        texts.forEach((item) => {
+          item.style = "color:white;display:block;margin:30px 0";
+        });
+      }
+
+      if (imgs) {
+        imgs.forEach((item) => {
+          item.style =
+            "max-width:200px;display:block;max-height:400px:padding:25px;margin:10px auto";
+        });
+      }
     }
   };
   xhttp.open("POST", "/documents", true);
@@ -76,14 +91,14 @@ document.onpaste = async (evt) => {
       reader.onerror = (error) => reject(error);
     });
 
-  async function Main() {
+  const Main = async () => {
     const dT = evt.clipboardData || window.clipboardData;
     const f = dT.files[0];
 
     const result = await toBase64(f);
 
     await request(result.substr(result.indexOf(",") + 1));
-  }
+  };
 
   Main();
 };

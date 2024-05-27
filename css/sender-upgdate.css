@@ -256,10 +256,11 @@ sf_chat_footer
 /*dialog check*/
 
 .dialog-check {
-  background: rgb(14, 164, 175) !important;
+  background: rgb(173, 243, 158) !important;
   display: block;
   position: relative;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
+  border-radius: 2px;
 }
 
 .dialog-check::before {

@@ -1,0 +1,16 @@
+.confluence-btn {
+  width: 24px;
+  height: 24px;
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  background: url(https://info.ftband.net/s/ru_RU/8100/e533a30abc9e1cf90ba3519e12647de186f0ee76/1/_/favicon.ico)
+    no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+
+.btn-active {
+    background-color: rgb(148, 225, 148);
+}

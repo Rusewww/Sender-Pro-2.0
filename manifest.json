@@ -1,7 +1,7 @@
 {
-  "name": "Sender-pro",
-  "description": "Sender pro",
-  "version": "1.3.1",
+  "name": "Sender-pro old sender",
+  "description": "Sender pro for old version chat.sender.ftband.net",
+  "version": "1.3.3",
   "browser_action": {
     "default_icon": "./img/favicon.ico",
     "default_popup": "popup.html"
@@ -13,10 +13,11 @@
       "matches": [
 	    "*://chat.sender.ftband.net/*",
         "*://chat.sender.ftband.net/*",
-        "*://haste.ftband.net/img/*"
+        "*://haste.ftband.net/img/*",
+        "*://info.ftband.net/*"
       ],
-      "js": ["./js/senderUpgrade.js", "./js/dialogCheck.js", "./js/haste.js"],
-      "css": ["./css/sender-upgdate.css", "./css/haste.css"],
+      "js": ["./js/senderUpgrade.js", "./js/dialogCheck.js", "./js/haste.js", "./js/content.js", "./js/confluence.js"],
+      "css": ["./css/sender-upgdate.css", "./css/haste.css", "./css/confluence.css"],
       "run_at": "document_end"
     }
   ]
