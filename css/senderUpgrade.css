@@ -53,7 +53,7 @@
 
 .spro-button {
   display: inline-block;
-  *display: inline;
+  display: inline;
   zoom: 1;
   padding: 6px 20px;
   margin: 0;
@@ -66,12 +66,10 @@
   color: #555;
 
   background-color: #ddd;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(255, 255, 255, 1)),
-    to(rgba(255, 255, 255, 0))
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
   );
   background-image: -webkit-linear-gradient(
     top,
@@ -256,10 +254,14 @@ sf_chat_footer
 /*dialog check*/
 
 .dialog-check {
-  background: rgb(14, 164, 175) !important;
+  background: linear-gradient(to right, 
+    rgba(173, 243, 158, 1) 79%,
+    rgba(173, 243, 158, 0.5) 84%,
+    rgba(173, 243, 158, 0) 92%
+  );
   display: block;
   position: relative;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .dialog-check::before {
